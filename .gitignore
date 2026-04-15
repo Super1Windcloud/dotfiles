@@ -1,0 +1,21 @@
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*.tmp
+*.bak
+.stow-local-ignore
+.codex
+
+# Never commit secrets or machine state
+home/.ssh/
+home/.gnupg/
+home/.npmrc.private
+home/.zsh_history
+home/.bash_history
+home/.config/Code - OSS/
+home/.config/gh/
+home/.config/rclone/
+home/.config/.wrangler/
+home/.config/dconf/
+home/.config/systemd/
