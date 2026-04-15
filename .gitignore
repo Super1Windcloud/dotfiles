@@ -8,14 +8,14 @@ Thumbs.db
 .codex
 
 # Never commit secrets or machine state
-home/.ssh/
-home/.gnupg/
-home/.npmrc.private
-home/.zsh_history
-home/.bash_history
-home/.config/Code - OSS/
-home/.config/gh/
-home/.config/rclone/
-home/.config/.wrangler/
-home/.config/dconf/
-home/.config/systemd/
+archlinux/.ssh/
+archlinux/.gnupg/
+archlinux/.npmrc.private
+archlinux/.zsh_history
+archlinux/.bash_history
+archlinux/.config/Code - OSS/
+archlinux/.config/gh/
+archlinux/.config/rclone/
+archlinux/.config/.wrangler/
+archlinux/.config/dconf/
+archlinux/.config/systemd/
