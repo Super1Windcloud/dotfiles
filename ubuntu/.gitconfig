@@ -1,0 +1,5 @@
+[user]
+	name = SuperWindCloud
+	email = you@example.com
+[init]
+	defaultBranch = main

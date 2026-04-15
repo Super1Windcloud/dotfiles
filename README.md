@@ -4,17 +4,22 @@ Personal system configuration tracked in a Git repository.
 
 ## Layout
 
-Files are stored under `archlinux/` so the target system is obvious at a glance. The directory maps onto `$HOME` and can be applied with a symlink manager such as GNU Stow.
+Files are stored under OS-specific directories so the target system is obvious at a glance. Each directory maps onto `$HOME` and can be applied with a symlink manager such as GNU Stow.
+
+- `archlinux/`: Arch Linux workstation configuration
+- `ubuntu/`: Ubuntu 24.04 / WSL configuration
 
 ## Included
 
 - Shell: `~/.zshrc`, `~/.bashrc`, `~/.bash_profile`, `~/.profile`
 - Git: `~/.gitconfig`
-- NPM prefix: `~/.npmrc`
 - Terminal utilities: `~/.config/fish`, `~/.config/htop`, `~/.config/neofetch`, `~/.config/superfile`
 - Tooling: `~/.config/mise`, `~/.config/paru`, `~/.config/yay`, `~/.config/act`
 - Desktop preferences: `~/.config/fsearch`, `~/.config/mimeapps.list`
-- Package manifests: Arch Linux explicit packages, AUR packages, Homebrew formulae, Homebrew casks
+- Package manifests:
+  - Arch Linux: explicit packages, AUR packages, Homebrew formulae, Homebrew casks
+  - Ubuntu: manual APT packages, Homebrew formulae, Homebrew casks
+- System metadata for Ubuntu exports: `/etc/os-release`, `uname -a`
 
 ## Excluded
 
@@ -25,6 +30,13 @@ Secrets, SSH keys, token-bearing app configs, editor caches, and machine-specifi
 ```bash
 cd ~/dotfiles
 stow archlinux
+```
+
+Ubuntu:
+
+```bash
+cd ~/dotfiles
+stow ubuntu
 ```
 
 ## Package Restore
@@ -51,4 +63,22 @@ Homebrew casks:
 
 ```bash
 brew install --cask $(< archlinux/packages/brew-casks.txt)
+```
+
+Ubuntu manual APT package list:
+
+```bash
+sudo apt install $(< ubuntu/packages/apt-manual.txt)
+```
+
+Ubuntu Homebrew formulae:
+
+```bash
+brew install $(< ubuntu/packages/brew-formulae.txt)
+```
+
+Ubuntu Homebrew casks:
+
+```bash
+brew install --cask $(< ubuntu/packages/brew-casks.txt)
 ```
