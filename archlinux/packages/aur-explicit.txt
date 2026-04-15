@@ -1,0 +1,11 @@
+cc-switch-bin
+flamegraph
+fsearch
+google-java-format
+nali
+paru
+php-cs-fixer
+subfinder
+yay
+yay-debug
+yazi-nightly-bin
